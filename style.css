@@ -1,0 +1,19 @@
+#sign-up-box{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+body{
+    background-color: rgb(31, 117, 254);
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sign-up-area{
+    padding: 10px;
+    
+}
+#sign-up-heading{
+    padding-left: 30%
+}
