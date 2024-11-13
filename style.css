@@ -1,25 +1,105 @@
+body{
+    background-color: rgb(31, 117, 254);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+}
+nav ul{
+    height: 25px;
+    display: flex;
+    list-style-type: none;    
+    width: 100%;
+    padding:0px 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+/* Apply the same styles to both login and event buttons */
+nav ul li {
+    margin: 0 10px;             /* Space between li items */
+    display: flex;              /* Align li items like a button */
+    align-items: center;        /* Vertically center content */
+    justify-content: center;    /* Horizontally center content */
+    padding: 8px 20px;          /* Consistent padding for a button-like look */
+    height: 40px;               /* Same height for both buttons */
+    border-radius: 25px;        /* Rounded corners for both buttons */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: 0.3s ease;      /* Smooth transition for hover effect */
+}
+
+/* Hover effect for both buttons */
+nav ul li:hover {
+    background-color: rgb(51, 51, 51);  /* Hover effect */
+    color: rgb(31, 117, 254);           /* Hover text color */
+}
+
+nav ul li#login-container{
+    margin-left: auto;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease;
+}
+nav ul li#login-container:hover
+{
+    background-color:rgb(51, 51, 51);
+    color: rgb(31, 117, 254);
+}
+nav ul li#Event{
+    padding: 0px 20px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease;
+}
+nav ul li#Event:hover
+{
+    background-color:rgb(51, 51, 51);
+    color: rgb(31, 117, 254);
+}
 #sign-up-form{
+
+    margin-top: 150px;
     background-color: rgb(51, 51, 51);
     color: white;
     flex-direction: column;
+    width: 250px;
+    border-radius: 5%
 }
-body{
-    background-color: rgb(31, 117, 254);
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#sign-up-area{
-    padding: 10px;
-}
+
 #sign-up-heading{
     text-align: center;
 }
+
+#sign-up-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sign-up-area input[type="text"],
+#sign-up-area input[type="password"] {
+    width: 80%;              
+    padding: 4px;             
+    box-sizing: border-box;   
+}
+
 .signup{
     text-align: center;
+    padding-bottom: 20px;
 }
-label{
-    padding: 10px;
+
+.signup a{
+    text-decoration: none;
+    
 }
