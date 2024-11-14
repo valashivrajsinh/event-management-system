@@ -1,4 +1,6 @@
+
 <?php
+alert("HELLO");
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -33,6 +35,9 @@ $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 // Insert user into database
 $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
+if ($stmt === false) {
+    die('MySQL prepare error: ' . $conn->error);
+}
 $stmt->bind_param("sss", $username, $email, $password_hashed);
 $result = $stmt->execute();
 
@@ -42,9 +47,9 @@ if ($result) {
     echo "Failed to register user";
 }
 $conn->close();
+
+
+
+header("Location: index.html");
+exit();
 ?>
-
-
-<script>
-window.location.href = 'index.html';
-</script>
