@@ -19,7 +19,8 @@ if (empty($username) || empty($email) || empty($password)) {
     echo "All fields are required";
     exit();
 }
-
+$sql = "SELECT * FROM users WHERE email = '$email'";
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "Email already registered";
